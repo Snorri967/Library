@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0; 
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 1.5fr 9fr;
+  grid-template-columns: 1fr 5fr;
+  background-color: #CFD2CF;
+}
+
+.navigation {
+  display: grid;
+  grid-column: 1 / 3;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F5EDDC;
+  border-bottom: 1px solid grey;
+}
+
+.libraryTitle {
+  grid-column: 1 / 2;
+  font-size: 3rem;
+  margin-left: 2vw;
+  align-self: center;
+  color: #EB1D36;
+}
+
+.books {
+  padding: 20px;
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.books > div {
+  margin: 10px 10px 0 0;
+  display: flex;
+  font-size: 1.35rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 350px;
+  width: 300px;
+  background-color: #BF8B67;
+  font-weight: bold;
+  color: #F7F7F7;
+  border-radius: 10px;
+}
+
+.addBookContainer{
+  grid-row: 2 / 3;
+  background-color: #F5EDDC;
+  border-right: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.form {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.nameContainer,
+.authorContainer,
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitAddition {
+  margin-top: 2vh;
+  width: 9.5vw;
+  height: 4vh;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #EB1D36;
+}
+
+input[type="text"],
+input[type="number"] {
+  margin-top: 1vh;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+input {
+  height: 3vh;
+}
+
+.errorName,
+.errorAuthor,
+.errorPages {
+  display: none;
+  color: red;
+  font-weight: bold;
+  margin-top: 1vh;
+}
+
+.readContainer {
+  margin-top: 1vh;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.readStatus,
+.delete {
+  cursor: pointer;
+  width: 100%;
+  height: 4vh;
+  font-size: 1.25rem;
+  border: none;
+  font-weight: bold;
+}
+
+.readStatus {
+  color: #fff;
+  background-color: #2EB086;
+}
+
+.delete {
+  color: #fff;
+  background-color: #EB1D36;
+}
